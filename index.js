@@ -261,8 +261,6 @@ function handleSpeech(text) {
 	// Dababy hype song
 	if (text.includes('turn up')
 		|| text.includes('turn') && text.includes('up')
-		|| text.includes('i') && text.includes('time')
-		|| text.includes('hi') && text.includes('time')
 		|| text.includes('high') && text.includes('time')
 		|| text.includes('hype') && text.includes('time')) {
 		const url = urlsHype[Math.floor(Math.random() * urlsHype.length)];
