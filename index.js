@@ -320,12 +320,12 @@ if (process.platform === 'win32') {
 		output: process.stdout,
 	});
 
-	rl.on('SIGINT', function () {
+	rl.on('SIGINT', () => {
 		process.emit('SIGINT');
 	});
 }
 
-process.on('SIGINT', function () {
+process.on('SIGINT', () => {
 	// graceful shutdown
 	if (serverId) {
 		const connection = getVoiceConnection(serverId);
