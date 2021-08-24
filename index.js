@@ -42,6 +42,7 @@ const urlsHype = [
 	'https://www.youtube.com/watch?v=G0lKzUnJUpA',
 	'https://www.youtube.com/watch?v=NBG3HF5l8jU',
 	'https://www.youtube.com/watch?v=NBG3HF5l8jU',
+	'https://www.youtube.com/watch?v=tLyRpGKWXRs',
 ];
 
 const urlsSad = [
@@ -94,6 +95,7 @@ const client = new Client({
 client.once('ready', () => {
 	console.log('DaBaby pullin\' up');
 	client.user.setActivity('and Pullin\' up');
+	playRandomClip();
 });
 
 
@@ -149,8 +151,8 @@ client.on('messageCreate', async (message) => {
 				message.reply('Error: DaBaby not connected to a voice channel!');
 				return;
 			}
-			// playRandomClip();
-			resource = createAudioResource();
+			playRandomClip();
+			// resource = createAudioResource();
 		}
 	}
 });
